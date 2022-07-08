@@ -1,11 +1,8 @@
-import { Header } from './components';
+import { App } from './app';
+
 import './global.scss';
-import { Main } from './pages';
 
 const root: HTMLElement | null = document.getElementById('root');
 
-const header = new Header(root);
-header.render();
-
-const main = new Main(root);
-main.render();
+const app: App = new App(root);
+app.start();

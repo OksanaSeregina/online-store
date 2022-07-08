@@ -1,16 +1,7 @@
 import './main.scss';
 
-/* export const template = (title: string, header: string) => {
-  return `<header class="logo">
-            <h1 class="logo">${title}</h1>
-            <div class="switcher"></div>
-            ${header}
-          </header>`;
-};
- */
 export const template = () => {
-  return `<main>
-            <div class="center">
+  return `<div class="center">
               <div class="filters-container">
                 <div class="group-filters">
                   <h3 class="title">Filters by value</h3>
@@ -55,5 +46,5 @@ export const template = () => {
                 </div>
               </div>
             </div>
-          </main>`;
+          `;
 };
