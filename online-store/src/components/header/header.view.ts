@@ -1,3 +1,4 @@
+import { IMG_PATH } from '../../constants';
 import './header.scss';
 
 export const template = () => {
@@ -6,7 +7,7 @@ export const template = () => {
               <div id="my-id1" class="info__header header-fixed">
                 <div class="logo">
                   <a href="#">
-                    <img src="./images/Logo.png" alt="logo" />
+                    <img src="${IMG_PATH}/logo.png" alt="logo" />
                   </a>
                 </div>
 
