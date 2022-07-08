@@ -1,13 +1,13 @@
-import { template } from './header.view';
+import { BaseComponent } from '../base-component';
+import { getTemplate } from './header.view';
 
-export class Header {
-  constructor(private root: HTMLElement | null) {}
+export class Header extends BaseComponent {
+  protected element: HTMLElement = document.createElement('header');
+  protected template: string = getTemplate();
 
-  public render(): void {
+  protected attachElement(): void {
     if (this.root) {
-      const element = document.createElement('header');
-      element.innerHTML = template();
-      this.root.prepend(element);
+      this.root.prepend(this.element);
     }
   }
 }

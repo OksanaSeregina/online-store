@@ -1,7 +1,7 @@
 import { IMG_PATH } from '../../constants';
 import './header.scss';
 
-export const template = () => {
+export const getTemplate = () => {
   return `<div class="center">
               <div id="my-id1" class="info__header header-fixed">
                 <div class="logo">

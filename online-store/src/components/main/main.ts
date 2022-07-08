@@ -1,13 +1,7 @@
-import { template } from './main.view';
+import { BaseComponent } from '../base-component';
+import { getTemplate } from './main.view';
 
-export class Main {
-  constructor(private root: HTMLElement | null) {}
-
-  public render(): void {
-    if (this.root) {
-      const element = document.createElement('main');
-      element.innerHTML = template();
-      this.root.appendChild(element);
-    }
-  }
+export class Main extends BaseComponent {
+  protected element: HTMLElement = document.createElement('main');
+  protected template: string = getTemplate();
 }

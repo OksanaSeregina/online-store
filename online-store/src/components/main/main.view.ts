@@ -1,6 +1,6 @@
 import './main.scss';
 
-export const template = () => {
+export const getTemplate = () => {
   return `<div class="center">
               <div class="filters-container">
                 <div class="group-filters">
