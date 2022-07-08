@@ -1,7 +1,11 @@
-import { Main } from './pages';
+import { Header } from './components';
 import './global.scss';
+import { Main } from './pages';
 
 const root: HTMLElement | null = document.getElementById('root');
 
-const mainPage = new Main(root);
-mainPage.render();
+const header = new Header(root);
+header.render();
+
+const main = new Main(root);
+main.render();

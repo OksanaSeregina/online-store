@@ -1,5 +1,11 @@
+import { template } from './header.view';
+
 export class Header {
-  static get(): string {
-    return '111';
+  constructor(private root: HTMLElement | null) {}
+
+  public render(): void {
+    if (this.root) {
+      this.root.innerHTML = template();
+    }
   }
 }

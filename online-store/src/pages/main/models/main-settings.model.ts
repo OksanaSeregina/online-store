@@ -1,3 +1,4 @@
-export interface IMainSettings {
+/* export interface IMainSettings {
   settings: { [key: string]: string };
 }
+ */

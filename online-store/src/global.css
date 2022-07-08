@@ -1,0 +1,32 @@
+body {
+  font-family: 'Catamaran', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-family: 'Taviraj', serif;
+}
+
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  background: #e5e5e5;
+}
+
+.center {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.show {
+  display: block;
+  margin-top: 32px;
+}
+
+.hide-descr {
+  display: none;
+}
+
+.color-red {
+  color: #d84727;
+}
+/*# sourceMappingURL=global.css.map */

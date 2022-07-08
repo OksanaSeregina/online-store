@@ -1,3 +1,53 @@
-.logo {
-  font-size: 10px;
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  .group-filters {
+    width: 30%;
+    border: solid 2px #da5e42;
+    border-radius: 10px;
+    padding: 10px;
+    .title {
+      font-family: 'Taviraj', serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: 0.02em;
+      color: #333333;
+      margin: 0;
+    }
+  }
+}
+
+.filters-items {
+  .series-selection {
+    display: flex;
+    align-items: center;
+    .title-selection {
+      font-family: 'Taviraj', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: 0.02em;
+      color: #333333;
+      margin: 0;
+      margin-right: 10px;
+    }
+    .list {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      .item {
+        margin-right: 5px;
+        border: solid 0.5px #333333;
+        border-radius: 50%;
+        padding: 4px;
+        cursor: pointer;
+      }
+      .item:hover {
+        background-color: #f1ddc9;
+      }
+    }
+  }
 }
