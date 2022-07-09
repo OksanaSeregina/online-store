@@ -18,6 +18,7 @@
   "license": "ISC",
   "homepage": "",
   "devDependencies": {
+    "@types/bootstrap": "^5.1.12",
     "@types/lodash": "^4.14.170",
     "@typescript-eslint/eslint-plugin": "^5.30.3",
     "@typescript-eslint/parser": "^4.26.1",
@@ -40,5 +41,8 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "@material/slider": "^14.0.0"
   }
 }
