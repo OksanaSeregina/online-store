@@ -1,43 +1,9 @@
+import { CardService } from '../../core';
 import { BaseComponent } from '../base-component';
-import { Card } from '../card';
+import { Card, ICard } from '../card';
 import { ISlider, Slider } from '../slider';
 import { getTemplate } from './main.view';
 
-const CARDS_MOCK = [
-  {
-    id: '1',
-    name: 'asdasd',
-    image: '',
-    count: '1',
-    year: '123',
-    series: 'asdasd',
-    color: 'asdasd',
-    size: 'asdasd',
-    favorite: true,
-  },
-  {
-    id: '2',
-    name: 'asdasd',
-    image: '',
-    count: '1',
-    year: '123',
-    series: 'asdasd',
-    color: 'asdasd',
-    size: 'asdasd',
-    favorite: true,
-  },
-  {
-    id: '3',
-    name: 'asdasd',
-    image: '',
-    count: '1',
-    year: '123',
-    series: 'asdasd',
-    color: 'asdasd',
-    size: 'asdasd',
-    favorite: true,
-  },
-];
 export class Main extends BaseComponent {
   private sliders: { [key: string]: Slider } = {};
   private cards: { [key: string]: Card } = {};
@@ -45,10 +11,14 @@ export class Main extends BaseComponent {
   protected element: HTMLElement = document.createElement('main');
   protected template: string = getTemplate();
 
-  protected attachElement(): void {
+  constructor(root: HTMLElement | null, title = '', private service: CardService) {
+    super(root, title);
+  }
+
+  protected async attachElement(): Promise<void> {
     super.attachElement();
     this.createSliders();
-    this.createCards();
+    await this.createCards();
   }
 
   private createSliders(): void {
@@ -62,8 +32,9 @@ export class Main extends BaseComponent {
     });
   }
 
-  private createCards(): void {
-    CARDS_MOCK.forEach((value) => {
+  private async createCards(): Promise<void> {
+    const cards = await this.service.get();
+    cards.forEach((value) => {
       this.cards[value.id] = new Card(document.querySelector('[data-root="card"]'), '', value);
       Object.values(this.cards).forEach((card: Card) => card.init());
     });
