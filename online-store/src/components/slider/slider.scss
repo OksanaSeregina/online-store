@@ -1,1 +1,22 @@
 @use "@material/slider/styles";
+
+.container-slider {
+  margin-top: 15px;
+  .range-slider {
+    // display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .count-range {
+      border: solid 0.5px #333333;
+      border-radius: 20px;
+      display: inline-flex;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      min-width: 80px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}

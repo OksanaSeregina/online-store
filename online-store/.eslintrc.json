@@ -45,6 +45,7 @@
       }
     ],
     "import/prefer-default-export": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
     "no-param-reassign": [
       "error",
       {

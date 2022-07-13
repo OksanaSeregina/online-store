@@ -23,17 +23,6 @@
   .series-selection {
     display: flex;
     align-items: center;
-    .title-selection {
-      font-family: 'Taviraj', serif;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 32px;
-      letter-spacing: 0.02em;
-      color: #333333;
-      margin: 0;
-      margin-right: 10px;
-    }
     .list {
       display: flex;
       list-style-type: none;
@@ -42,12 +31,201 @@
         margin-right: 5px;
         border: solid 0.5px #333333;
         border-radius: 50%;
-        padding: 4px;
+        padding: 4px 9px;
         cursor: pointer;
       }
       .item:hover {
         background-color: #f1ddc9;
       }
     }
+  }
+}
+
+.title-selection {
+  font-family: 'Taviraj', serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  color: #333333;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.item-color {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+  margin: 15px 10px;
+}
+
+.color-type-light {
+  background-color: #f5f5dc;
+}
+
+.color-type-brown {
+  background-color: #654321;
+}
+
+.color-type-gray {
+  background-color: #696969;
+}
+
+.color-type-active::after {
+  content: '✓';
+  color: #52b358;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.checkbox-popular {
+  display: flex;
+  input[type='checkbox' i] {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+}
+
+.search-container {
+  position: relative;
+  margin-bottom: 30px;
+  .input-search {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border: solid 2px #b49987;
+    border-radius: 20px;
+    box-sizing: border-box;
+  }
+  .input-search:focus {
+    border: solid 2px #b49987;
+    outline: none;
+    box-shadow: 0px 5px 10px 2px #585b56;
+  }
+}
+
+.icons {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-search,
+.icon-close {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  color: #585b56;
+  cursor: pointer;
+}
+.icon-search:hover,
+.icon-close:hover {
+  color: #b49987;
+}
+
+.sorting-container select {
+  width: 100%;
+  padding: 10px;
+  height: 50px;
+  border: solid 2px #b49987;
+  border-radius: 20px;
+  font-size: 20px;
+  color: #333333;
+  outline: none;
+}
+
+.reset {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 30px 0 10px;
+  .btn-reset {
+    border: solid 2px #b49987;
+    border-radius: 20px;
+    color: #333333;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    width: 200px;
+    height: 60px;
+    margin: 10px 0;
+    padding: 0 25px;
+  }
+  .btn-reset:hover {
+    background-color: #f1ddc9;
+  }
+}
+
+.catalog-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .product-card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+    transition: all 3s;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 40px;
+    .product-thumb {
+      background-color: #f1ddc9;
+      border-top-right-radius: 40px;
+      border-top-left-radius: 40px;
+      .offer-image {
+        width: 250px;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+    .product-details {
+      color: #333333;
+      .name-product {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        border-bottom: solid 1px #b49987;
+        display: inline-block;
+        margin: 0;
+        margin-top: 20px;
+      }
+      .description {
+        font-size: 16px;
+        line-height: 8px;
+        font-weight: 500;
+      }
+    }
+    .add-cart {
+      padding-bottom: 16px;
+      .card-button {
+        a {
+          text-decoration: none;
+          width: 150px;
+          font-size: 16px;
+          line-height: 24px;
+          color: #ffffff;
+          background: #d84727;
+          padding: 15px;
+          display: inline-block;
+          transition: 0.5s;
+          border: 1px solid rgba(216, 71, 39, 0);
+        }
+        a:hover {
+          color: #333333;
+          background-color: #ffffff;
+          border: 1px solid #d84727;
+        }
+      }
+    }
+  }
+  .product-card:hover {
+    box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
   }
 }

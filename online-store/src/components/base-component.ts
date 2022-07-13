@@ -2,11 +2,19 @@ export abstract class BaseComponent {
   protected abstract element: HTMLElement;
   protected abstract template: string;
 
-  constructor(protected root: HTMLElement | null) {}
+  get instance(): HTMLElement {
+    return this.element;
+  }
+
+  constructor(protected root: HTMLElement | null, protected title: string = '') {}
+
+  public init(): void {
+    this.render();
+  }
 
   public render(): void {
+    this.element.innerHTML = this.template;
     if (this.root) {
-      this.element.innerHTML = this.template;
       this.attachElement();
     }
   }
