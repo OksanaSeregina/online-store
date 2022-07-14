@@ -20,8 +20,6 @@ export abstract class BaseComponent {
   }
 
   protected attachElement(): void {
-    if (this.root) {
-      this.root.appendChild(this.element);
-    }
+    this.root?.appendChild(this.element);
   }
 }

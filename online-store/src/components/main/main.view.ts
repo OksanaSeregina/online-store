@@ -13,7 +13,7 @@ export const getTemplate = () => {
                       <ul class="list">
                         <li class="item">Maple</li>
                         <li class="item">Ebony</li>
-                        <li class="item">Featured</li>
+                        <li class="item">Tomia</li>
                       </ul>
                     </div>
                   </div>

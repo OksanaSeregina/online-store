@@ -9,13 +9,7 @@ export const getTemplate = () => {
                     <img src="${IMG_PATH}/logo.png" alt="logo" />
                   </a>
                 </div>
-
-                <div class="icon__header">
-                  <div class="icon" data-link="cart">
-                    <a href="#" class="cart"></a>
-                    <span class="quantity-cart"></span>
-                  </div>
-                </div>
+                <div class="icon__header" data-root="cart"></div>
               </div>
           </div>`;
 };

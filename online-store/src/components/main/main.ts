@@ -33,7 +33,7 @@ export class Main extends BaseComponent {
   }
 
   private async createCards(): Promise<void> {
-    const cards = await this.service.get();
+    const cards: ICard[] = await this.service.get();
     cards.forEach((value) => {
       this.cards[value.id] = new Card(document.querySelector('[data-root="card"]'), '', value);
       Object.values(this.cards).forEach((card: Card) => card.init());

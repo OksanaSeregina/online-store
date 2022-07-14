@@ -1,0 +1,29 @@
+.icon {
+  &-cart {
+    width: 46px;
+    height: 46px;
+    background: #f1ddc9;
+    border-radius: 50%;
+    .disabled {
+      opacity: 0;
+    }
+  }
+  .cart {
+    display: block;
+    height: inherit;
+    width: inherit;
+    background: url(/src/assets/images/Cart.png) no-repeat center/50%;
+    position: absolute;
+  }
+  .quantity-cart {
+    position: relative;
+    color: #fff;
+    background: #d84727;
+    border-radius: 50%;
+    padding: 0 7px;
+    font-size: small;
+    font-weight: 600;
+    right: -75%;
+    top: -12%;
+  }
+}

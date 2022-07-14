@@ -2,13 +2,13 @@ import { ICard } from '../../components';
 
 // Singleton
 export class CardService {
-  private static instance: CardService;
+  private static _instance: CardService;
 
   constructor() {
-    if (!CardService.instance) {
-      CardService.instance = this;
+    if (!CardService._instance) {
+      CardService._instance = this;
     }
-    return CardService.instance;
+    return CardService._instance;
   }
 
   public get(): Promise<ICard[]> {
