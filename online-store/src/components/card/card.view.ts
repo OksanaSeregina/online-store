@@ -3,7 +3,7 @@ import './card.scss';
 import { ICard } from './models';
 
 export const getTemplate = (settings: ICard) => {
-  return `<div data-id="${settings.id}" class="product-card">
+  return `<div data-card-id="${settings.id}" class="product-card">
             <div class="product-thumb">
               <img class="offer-image" src="${IMG_PATH}/${settings.image}" />
             </div>
