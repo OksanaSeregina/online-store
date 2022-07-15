@@ -1,8 +1,10 @@
 import { BaseComponent } from '../base-component';
 import { Card } from '../card';
+import { Modal } from '../modal';
 import { getTemplate } from './cart.view';
 
 const MAX_COUNT = 20;
+const MAX_LENGTH_MESSAGE = `Sorry, you can not add more than ${MAX_COUNT} items`;
 
 export class Cart extends BaseComponent {
   private static _instance: Cart;
@@ -33,9 +35,16 @@ export class Cart extends BaseComponent {
   }
 
   public onChange(item: Card): { [key: string]: Card } {
+    Modal.instance.isHidden || Modal.instance.hide();
+
     if (this.isExist(item)) {
+      item.toogle();
       delete this.state[item.id];
-    } else if (this.count !== MAX_COUNT) {
+    } else if (this.count === MAX_COUNT) {
+      Modal.instance.show(MAX_LENGTH_MESSAGE);
+      return this.state;
+    } else {
+      item.toogle();
       this.state[item.id] = item;
     }
     this.renderCount();

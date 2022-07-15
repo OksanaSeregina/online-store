@@ -2,12 +2,14 @@ import { CardService } from '../../core';
 import { BaseComponent } from '../base-component';
 import { Card, ICard } from '../card';
 import { Cart } from '../cart';
+import { Modal } from '../modal';
 import { ISlider, Slider } from '../slider';
 import { getTemplate } from './main.view';
 
 export class Main extends BaseComponent {
   private sliders: { [key: string]: Slider } = {};
   private cards: { [key: string]: Card } = {};
+  private modal: Modal | undefined;
 
   protected element: HTMLElement = document.createElement('main');
   protected template: string = getTemplate();

@@ -2,8 +2,7 @@ import { IMG_PATH } from '../../constants';
 import './main.scss';
 
 export const getTemplate = () => {
-  return `<div class="center">
-              <div class="filters-container">
+  return `<div class="filters-container">
 
                 <div class="group-filters">
                   <h3 class="title">Filters by value</h3>
@@ -54,7 +53,7 @@ export const getTemplate = () => {
                       <input class="input-search" id="input" type="text" placeholder="Search" autofocus
                                         autocomplete="off"/>
                       <img class="icons icon-search" src="${IMG_PATH}/search.png" alt="search" />
-                      <img class="icons icon-close hide-descr" src="${IMG_PATH}/cross.png" alt="cross" />
+                      <img class="icons icon-close hidden" src="${IMG_PATH}/cross.png" alt="cross" />
                     </div>
                   </div>
                   <div class="filters-items">
@@ -79,8 +78,5 @@ export const getTemplate = () => {
               </div>
 
               <div class="catalog-container" data-root="card"></div>
-
-              </div>
-            </div>
           `;
 };
