@@ -18,7 +18,7 @@ export const getTemplate = (settings: ICard) => {
             </div>
             <div class="add-cart">
               <div class="card-button">
-                <a data-button-id="${settings.id}" href="#">Add to cart</a>
+                <button data-button-id="${settings.id}">Add to cart</button>
               </div>
             </div>
           </div>`;

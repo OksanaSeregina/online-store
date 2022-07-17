@@ -42,9 +42,9 @@
 .add-cart {
   padding-bottom: 16px;
 
-  a {
+  button {
     text-decoration: none;
-    width: 150px;
+    width: 160px;
     font-size: 16px;
     line-height: 24px;
     color: #ffffff;
@@ -59,7 +59,7 @@
 .product-card:hover {
   box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
 
-  .add-cart a {
+  .add-cart button {
     color: #333333;
     background-color: #ffffff;
     border: 1px solid #d84727;
