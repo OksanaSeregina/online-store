@@ -6,7 +6,10 @@ export const getTemplate = (settings: ISlider) => {
             <div class="container-slider">
               <h6 class="title-selection">${settings.title ? settings.title + ': ' : ''}</h6>
                 <div class="range-slider">
-                  <div class="count-range" data-slider-range-from="${settings.id}"></div>
+                  <div class="count-container">
+                    <div class="count-range" data-slider-range-from="${settings.id}"></div>
+                    <div class="count-range" data-slider-range-to="${settings.id}"></div>
+                  </div>
                   <div data-id="${settings.id}" class="mdc-slider mdc-slider--range">
                     <input class="mdc-slider__input" data-slider-min="${settings.id}" type="range" name="rangeStart">
                     <input class="mdc-slider__input" data-slider-max="${settings.id}" type="range" name="rangeEnd">
@@ -23,7 +26,6 @@ export const getTemplate = (settings: ISlider) => {
                       <div class="mdc-slider__thumb-knob"></div>
                     </div>
                   </div>
-                  <div class="count-range" data-slider-range-to="${settings.id}"></div>
                 </div>
               </div>
           </div>`;

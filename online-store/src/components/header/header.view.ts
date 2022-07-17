@@ -3,7 +3,7 @@ import './header.scss';
 
 export const getTemplate = () => {
   return `<div class="center">
-              <div id="my-id1" class="info__header header-fixed">
+              <div id="my-id1" class="info__header">
                 <div class="logo">
                   <a href="#">
                     <img src="${IMG_PATH}/logo.png" alt="logo" />

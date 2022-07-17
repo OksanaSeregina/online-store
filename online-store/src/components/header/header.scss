@@ -1,33 +1,10 @@
 header {
   padding-top: 35px;
   padding-bottom: 35px;
-  // position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   background-color: #e5e5e5;
-  // z-index: 100;
-  .info__header {
-    display: flex;
-    justify-content: space-between;
-    .logo {
-      align-self: end;
-      a {
-        img {
-          vertical-align: baseline;
-        }
-      }
-    }
-  }
-}
-
-.icon__header {
-  display: flex;
-  justify-content: flex-end;
-}
-
-*[data-visible='none'] {
-  opacity: 0;
 }
 
 header a {
@@ -41,6 +18,24 @@ header a {
   letter-spacing: 0.02em;
 }
 
-header a:hover {
-  color: #d84727;
+.info__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  align-self: end;
+
+  img {
+    vertical-align: baseline;
+  }
+}
+
+.icon__header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+*[data-visible='none'] {
+  opacity: 0;
 }

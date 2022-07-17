@@ -4,10 +4,12 @@
     height: 46px;
     background: #f1ddc9;
     border-radius: 50%;
+
     .disabled {
       opacity: 0;
     }
   }
+
   .cart {
     display: block;
     height: inherit;
@@ -15,6 +17,7 @@
     background: url(/src/assets/images/Cart.png) no-repeat center/50%;
     position: absolute;
   }
+
   .quantity-cart {
     position: relative;
     color: #fff;

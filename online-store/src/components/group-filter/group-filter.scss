@@ -1,21 +1,22 @@
-.filters-items {
-  .series-selection {
-    display: flex;
-    align-items: center;
-    .list {
-      display: flex;
-      list-style-type: none;
-      padding: 0;
-      .item {
-        margin-right: 5px;
-        border: solid 0.5px #333333;
-        border-radius: 50%;
-        padding: 4px 9px;
-        cursor: pointer;
-      }
-      .item:hover {
-        background-color: #f1ddc9;
-      }
-    }
+.series-selection {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+
+  .item {
+    margin-right: 5px;
+    border: solid 0.5px #333333;
+    border-radius: 50%;
+    padding: 4px 9px;
+    cursor: pointer;
+  }
+
+  .item:hover {
+    background-color: #f1ddc9;
   }
 }

@@ -6,6 +6,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
   .link-github {
     display: flex;
     flex-wrap: wrap;
@@ -14,26 +15,30 @@ footer {
     list-style: none;
     padding: 0;
     margin: 0;
-    .item-link-github {
-      font-family: 'Catamaran', sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 26px;
-      line-height: 50px;
-      margin-right: 20px;
-      transition: 1s;
-      .name-link-github {
-        text-decoration: none;
-        color: #ffffff;
-      }
-      .name-link-github:hover {
-        color: #c5b358;
-      }
-      img {
-        width: 150px;
-        height: 50px;
-      }
-    }
+  }
+}
+
+.item-link-github {
+  font-family: 'Catamaran', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 50px;
+  margin-right: 20px;
+  transition: 1s;
+
+  .name-link-github {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .name-link-github:hover {
+    color: #c5b358;
+  }
+
+  img {
+    width: 150px;
+    height: 50px;
   }
 }
 
@@ -50,21 +55,19 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-  footer {
-    .link-github {
-      .item-link-github {
-        font-size: 20px;
-        img {
-          width: 120px;
-          height: 40px;
-        }
-      }
+  .item-link-github {
+    font-size: 20px;
+    img {
+      width: 120px;
+      height: 40px;
     }
   }
 }
 
 @media screen and (max-width: 425px) {
-  footer .link-github {
-    justify-content: center;
+  footer {
+    .link-github {
+      justify-content: center;
+    }
   }
 }
