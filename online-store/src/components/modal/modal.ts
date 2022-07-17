@@ -19,8 +19,8 @@ export class Modal extends BaseComponent {
     return this._isHidden;
   }
 
-  constructor(root: HTMLElement | null, title = '') {
-    super(root, title);
+  constructor(root: HTMLElement | null) {
+    super(root);
     if (!Modal._instance) {
       Modal._instance = this;
     }

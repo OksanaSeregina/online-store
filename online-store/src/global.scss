@@ -1,6 +1,4 @@
 body {
-  font-family: 'Catamaran', sans-serif;
-  font-family: 'Nunito', sans-serif;
   font-family: 'Taviraj', serif;
 }
 
@@ -10,90 +8,6 @@ body {
   background: #e5e5e5;
 }
 
-.center {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-@mixin images {
-  width: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
-
-@mixin img__backgr {
-  display: block;
-  height: inherit;
-  width: inherit;
-}
-
-@mixin p__nunito {
-  font-family: 'Nunito', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: 0.03em;
-  color: #333333;
-}
-
-@mixin taviraj {
-  font-family: 'Taviraj', serif;
-  font-style: normal;
-  font-weight: normal;
-  letter-spacing: 0.02em;
-  color: #333333;
-}
-
-@mixin h4__taviraj {
-  font-family: 'Taviraj', serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
-  letter-spacing: 0.03em;
-  color: #333333;
-}
-
-@mixin text__h1 {
-  font-family: 'Taviraj', serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 60px;
-  line-height: 80px;
-  letter-spacing: 0.02em;
-  color: #333333;
-  width: 60%;
-}
-
-@mixin link__hover {
-  content: '';
-  display: block;
-  width: 100%;
-  background-color: $color;
-  height: 2px;
-  transition: all 0.3s;
-  transform: scale(0);
-}
-
-$color: #d84727;
-
-.show {
-  display: block;
-  margin-top: 32px;
-}
-
 .hidden {
   display: none;
-}
-
-.color-red {
-  color: $color;
-}
-
-@media screen and (max-width: 1440px) {
-  .center {
-    max-width: 90%;
-  }
 }

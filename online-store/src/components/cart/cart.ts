@@ -21,8 +21,8 @@ export class Cart extends BaseComponent {
     return Cart._instance;
   }
 
-  constructor(root: HTMLElement | null, title = '') {
-    super(root, title);
+  constructor(root: HTMLElement | null) {
+    super(root);
     if (!Cart._instance) {
       Cart._instance = this;
     }
@@ -38,13 +38,13 @@ export class Cart extends BaseComponent {
     Modal.instance.isHidden || Modal.instance.hide();
 
     if (this.isExist(item)) {
-      item.toogle();
+      item.isOrdered = false;
       delete this.state[item.id];
     } else if (this.count === MAX_COUNT) {
       Modal.instance.show(MAX_LENGTH_MESSAGE);
       return this.state;
     } else {
-      item.toogle();
+      item.isOrdered = true;
       this.state[item.id] = item;
     }
     this.renderCount();

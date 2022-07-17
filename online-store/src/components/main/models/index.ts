@@ -1,2 +1,1 @@
-/* export * from './main-settings.model';
- */
+export * from './root.model';

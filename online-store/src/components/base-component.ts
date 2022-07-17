@@ -6,7 +6,7 @@ export abstract class BaseComponent {
     return this.element;
   }
 
-  constructor(protected root: HTMLElement | null, protected title: string = '') {}
+  constructor(protected root: HTMLElement | null) {}
 
   public init(): void {
     this.render();
@@ -19,7 +19,17 @@ export abstract class BaseComponent {
     }
   }
 
+  public destroy(): void {
+    if (this.root) {
+      this.root.innerHTML = '';
+    }
+  }
+
   protected attachElement(): void {
     this.root?.appendChild(this.element);
+  }
+
+  protected onResetChange(): void {
+    return;
   }
 }

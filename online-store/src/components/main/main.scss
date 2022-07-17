@@ -1,3 +1,9 @@
+.center {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .filters-container {
   display: flex;
   flex-wrap: wrap;
@@ -16,28 +22,6 @@
       letter-spacing: 0.02em;
       color: #333333;
       margin: 0;
-    }
-  }
-}
-
-.filters-items {
-  .series-selection {
-    display: flex;
-    align-items: center;
-    .list {
-      display: flex;
-      list-style-type: none;
-      padding: 0;
-      .item {
-        margin-right: 5px;
-        border: solid 0.5px #333333;
-        border-radius: 50%;
-        padding: 4px 9px;
-        cursor: pointer;
-      }
-      .item:hover {
-        background-color: #f1ddc9;
-      }
     }
   }
 }
@@ -124,6 +108,8 @@
   right: 5%;
   top: 20%;
   color: #585b56;
+}
+.icon-close {
   cursor: pointer;
 }
 .icon-search:hover,
@@ -170,9 +156,24 @@
   gap: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
+  &.empty-catalog-container {
+    grid-template-columns: auto;
+    .message {
+      justify-self: center;
+      text-align: center;
+      font-size: 32px;
+    }
+  }
+  .hidden {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1440px) {
+  .center {
+    max-width: 90%;
+  }
+
   .catalog-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -200,74 +201,5 @@
 @media screen and (max-width: 600px) {
   .catalog-container {
     grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.modal {
-  display: flex;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1000;
-  .modal_content {
-    text-align: center;
-    width: 70.313%;
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    z-index: 99999;
-    .close_modal_window {
-      position: absolute;
-      right: 30px;
-      top: 2px;
-      color: #292929;
-      font-size: 60px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  }
-}
-
-.popup-content {
-  display: flex;
-  justify-content: center;
-  padding: 100px 0;
-  font-size: 60px;
-}
-
-/* Media */
-@media screen and (max-width: 1279px) {
-  .modal {
-    .modal_content {
-      .close_modal_window {
-        font-size: 40px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .popup-content {
-    font-size: 45px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .modal {
-    .modal_content {
-      text-align: center;
-      .close_modal_window {
-        font-size: 30px;
-        right: 15px;
-      }
-    }
-  }
-  .popup-content {
-    font-size: 24px;
   }
 }

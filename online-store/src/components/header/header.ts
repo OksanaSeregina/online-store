@@ -14,7 +14,7 @@ export class Header extends BaseComponent {
   }
 
   private createCart(): void {
-    this.cart = new Cart(document.querySelector('[data-root="cart"]'), '');
+    this.cart = new Cart(document.querySelector('[data-root="cart"]'));
     this.cart.init();
   }
 }
