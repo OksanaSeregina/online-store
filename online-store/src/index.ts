@@ -1,3 +1,4 @@
+import { readme } from './readme';
 import { App } from './app';
 import { StorageService } from './core';
 
@@ -9,3 +10,5 @@ const storage: StorageService = new StorageService();
 
 const app: App = new App(root, popup, storage);
 app.start();
+
+readme(); // NOTE: show console message for cross-checking
