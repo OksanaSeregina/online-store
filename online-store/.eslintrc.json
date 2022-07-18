@@ -16,7 +16,7 @@
     "browser": true,
     "node": true
   },
-  "ignorePatterns": ["*.config.js", "node_modules/", "dist/"],
+  "ignorePatterns": ["*.config.js", "node_modules/", "dist/", "*.spec.*"],
   "rules": {
     "prettier/prettier": [
       "error",

@@ -1,6 +1,5 @@
 import { ICard } from '../../components';
 
-// Singleton
 export class CardService {
   private static _instance: CardService;
 
@@ -11,7 +10,7 @@ export class CardService {
     return CardService._instance;
   }
 
-  public get(): Promise<ICard[]> {
+  public get(): Promise<ICard[] | void> {
     // NOTE: have dynamic import instead fetch to avoid using json or node server
     return import('../../db.json').then((obj: { cards: ICard[] }) => obj.cards);
   }
