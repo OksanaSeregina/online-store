@@ -1,3 +1,5 @@
+@import '../../colors.scss';
+
 .series-selection {
   display: flex;
   align-items: center;
@@ -10,13 +12,13 @@
 
   .item {
     margin-right: 5px;
-    border: solid 0.5px #333333;
+    border: solid 0.5px $text-color;
     border-radius: 50%;
     padding: 4px 9px;
     cursor: pointer;
   }
 
   .item:hover {
-    background-color: #f1ddc9;
+    background-color: $pink;
   }
 }

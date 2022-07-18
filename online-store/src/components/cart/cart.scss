@@ -1,8 +1,10 @@
+@import '../../colors.scss';
+
 .icon {
   &-cart {
     width: 46px;
     height: 46px;
-    background: #f1ddc9;
+    background: $pink;
     border-radius: 50%;
 
     .disabled {
@@ -20,8 +22,8 @@
 
   .quantity-cart {
     position: relative;
-    color: #fff;
-    background: #d84727;
+    color: $white;
+    background: $red;
     border-radius: 50%;
     padding: 0 7px;
     font-size: small;

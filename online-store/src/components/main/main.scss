@@ -1,3 +1,5 @@
+@import '../../colors.scss';
+
 .center {
   max-width: 1400px;
   width: 100%;
@@ -12,30 +14,22 @@
 
 .group-filters {
   width: 30%;
-  border: solid 2px #da5e42;
+  border: solid 2px $red;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 
   .title {
-    font-family: 'Taviraj', serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 36px;
     line-height: 40px;
-    letter-spacing: 0.02em;
-    color: #333333;
     margin: 0;
   }
 }
 
 .title-selection {
-  font-family: 'Taviraj', serif;
-  font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  letter-spacing: 0.02em;
-  color: #333333;
   margin: 0;
   margin-right: 10px;
 }
@@ -54,20 +48,20 @@
 }
 
 .color-type-light {
-  background-color: #f5f5dc;
+  background-color: $light;
 }
 
 .color-type-brown {
-  background-color: #654321;
+  background-color: $brown;
 }
 
 .color-type-gray {
-  background-color: #696969;
+  background-color: $grey;
 }
 
 .color-type-active::after {
   content: '✓';
-  color: #52b358;
+  color: $green;
   font-size: 28px;
   font-weight: bold;
 }
@@ -90,15 +84,15 @@
     width: 100%;
     font-size: 18px;
     padding: 10px;
-    border: solid 2px #b49987;
+    border: solid 2px $border-color;
     border-radius: 20px;
     box-sizing: border-box;
   }
 
   .input-search:focus {
-    border: solid 2px #b49987;
+    border: solid 2px $border-color;
     outline: none;
-    box-shadow: 0px 5px 10px 2px #585b56;
+    box-shadow: 0px 5px 10px 2px $shadow;
   }
 }
 
@@ -112,26 +106,21 @@
   position: absolute;
   right: 5%;
   top: 20%;
-  color: #585b56;
+  color: $shadow;
 }
 
 .icon-close {
   cursor: pointer;
 }
 
-.icon-search:hover,
-.icon-close:hover {
-  color: #b49987;
-}
-
 .sorting-container select {
   width: 100%;
   padding: 10px;
   height: 50px;
-  border: solid 2px #b49987;
+  border: solid 2px $border-color;
   border-radius: 20px;
   font-size: 20px;
-  color: #333333;
+  color: $text-color;
   outline: none;
 }
 
@@ -142,9 +131,9 @@
   margin: 30px 0 10px;
 
   .btn-reset {
-    border: solid 2px #b49987;
+    border: solid 2px $border-color;
     border-radius: 20px;
-    color: #333333;
+    color: $text-color;
     cursor: pointer;
     font-size: 20px;
     font-weight: 400;
@@ -155,7 +144,7 @@
   }
 
   .btn-reset:hover {
-    background-color: #f1ddc9;
+    background-color: $pink;
   }
 }
 

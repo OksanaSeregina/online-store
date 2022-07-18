@@ -1,0 +1,12 @@
+@mixin taviraj {
+  font-family: 'Taviraj', serif;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  color: $text-color;
+}
+
+@mixin catamaran {
+  font-family: 'Catamaran', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}

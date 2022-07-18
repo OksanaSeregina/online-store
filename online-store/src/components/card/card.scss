@@ -1,16 +1,16 @@
-@import "../../colors.scss";
+@import '../../colors.scss';
 
 .product-card {
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
   transition: all 500ms;
-  background: #ffffff;
+  background: $white;
   text-align: center;
   border-radius: 40px;
 }
 
 .product-thumb {
-  background-color: #f1ddc9;
+  background-color: $pink;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
 
@@ -22,13 +22,13 @@
 }
 
 .product-details {
-  color: #333333;
+  color: $text-color;
 
   .name-product {
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
-    border-bottom: solid 1px #b49987;
+    border-bottom: solid 1px $border-color;
     display: inline-block;
     margin: 0;
     margin-top: 20px;
@@ -49,8 +49,8 @@
     width: 160px;
     font-size: 16px;
     line-height: 24px;
-    color: #ffffff;
-    background: $color;
+    color: $white;
+    background: $red;
     padding: 15px;
     display: inline-block;
     transition: 0.5s;
@@ -62,9 +62,9 @@
   box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
 
   .add-cart button {
-    color: #333333;
-    background-color: #ffffff;
-    border: 1px solid #d84727;
+    color: $text-color;
+    background-color: $white;
+    border: 1px solid $red;
   }
 }
 

@@ -1,13 +1,14 @@
-
+@import 'colors.scss';
+@import 'fonts.scss';
 
 body {
-  font-family: 'Taviraj', serif;
+  @include taviraj;
 }
 
 .wrapper {
   width: 100%;
   margin: 0 auto;
-  background: #e5e5e5;
+  background: $background-color;
 }
 
 .hidden {

@@ -1,11 +1,13 @@
+@import '../../colors.scss';
+
 .series-type {
   &.series-type-active {
-    background-color: #f1ddc9;
+    background-color: $pink;
   }
 }
 
 .size-type {
   &.size-type-active {
-    background-color: #f1ddc9;
+    background-color: $pink;
   }
 }

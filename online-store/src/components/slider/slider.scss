@@ -1,5 +1,7 @@
 @use "@material/slider/styles";
 
+@import '../../colors.scss';
+
 .container-slider {
   margin-top: 15px;
 
@@ -14,7 +16,7 @@
   justify-content: space-between;
 
   .count-range {
-    border: solid 0.5px #333333;
+    border: solid 0.5px $text-color;
     border-radius: 20px;
     display: inline-flex;
     height: 40px;

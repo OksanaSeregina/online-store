@@ -1,6 +1,9 @@
+@import '../../colors.scss';
+@import '../../fonts.scss';
+
 footer {
-  background-color: #d84727;
-  color: #ffffff;
+  background-color: $red;
+  color: $white;
   height: 100px;
   display: flex;
   flex-wrap: wrap;
@@ -19,9 +22,7 @@ footer {
 }
 
 .item-link-github {
-  font-family: 'Catamaran', sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  @include catamaran;
   font-size: 26px;
   line-height: 50px;
   margin-right: 20px;
@@ -29,11 +30,11 @@ footer {
 
   .name-link-github {
     text-decoration: none;
-    color: #ffffff;
+    color: $white;
   }
 
   .name-link-github:hover {
-    color: #c5b358;
+    color: $gold;
   }
 
   img {
