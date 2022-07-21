@@ -1,6 +1,9 @@
 export abstract class BaseComponent {
   protected abstract element: HTMLElement;
   protected abstract template: string;
+  protected onResetChange = (): void => {
+    return undefined;
+  };
 
   get instance(): HTMLElement {
     return this.element;
@@ -27,9 +30,5 @@ export abstract class BaseComponent {
 
   protected attachElement(): void {
     this.root?.appendChild(this.element);
-  }
-
-  protected onResetChange(): void {
-    return;
   }
 }

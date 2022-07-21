@@ -6,6 +6,10 @@ export class App {
   private main: Main = new Main(this.root, new CardService(), this.storageService);
   private footer: Footer = new Footer(this.root);
   private modal: Modal = new Modal(this.modalRoot);
+  private onChange = (): void => {
+    this.storageService.clear();
+    location.reload();
+  };
 
   constructor(private root: HTMLElement | null, private modalRoot: HTMLElement | null, private storageService: StorageService) {}
 
@@ -18,11 +22,6 @@ export class App {
   }
 
   private listen(): void {
-    document.addEventListener('resetStorageChanged', this.onChange.bind(this));
-  }
-
-  private onChange(): void {
-    this.storageService.clear();
-    location.reload();
+    document.addEventListener('resetStorageChanged', this.onChange);
   }
 }

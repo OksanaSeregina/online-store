@@ -14,6 +14,9 @@ export class Slider extends BaseComponent {
   });
   protected element: HTMLElement = document.createElement('div');
   protected template: string = getTemplate(this.settings);
+  protected onResetChange = (): void => {
+    this.loadConfig([this.settings.min, this.settings.max]);
+  };
 
   get id() {
     return this.settings.id;
@@ -46,7 +49,7 @@ export class Slider extends BaseComponent {
 
   public init(): void {
     super.init();
-    document.addEventListener('resetFilterChanged', this.onResetChange.bind(this));
+    document.addEventListener('resetFilterChanged', this.onResetChange);
   }
 
   public render(): void {
@@ -78,10 +81,6 @@ export class Slider extends BaseComponent {
     this.renderRange(range);
     this.event.detail.value.range = range;
     this.root?.dispatchEvent(this.event);
-  }
-
-  protected onResetChange(): void {
-    this.loadConfig([this.settings.min, this.settings.max]);
   }
 
   private loadConfig(value: [string, string]): void {

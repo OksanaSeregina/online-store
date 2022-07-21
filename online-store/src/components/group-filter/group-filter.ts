@@ -36,6 +36,9 @@ export class GroupFilter extends BaseComponent {
 
   protected element: HTMLElement = document.createElement('div');
   protected template: string = getTemplate();
+  protected onResetChange = (): void => {
+    this.loadInputConfig(DEFAULT_SEARCH);
+  };
 
   static get instance() {
     return GroupFilter._instance;
@@ -51,7 +54,7 @@ export class GroupFilter extends BaseComponent {
 
   public init(): void {
     super.init();
-    document.addEventListener('resetFilterChanged', this.onResetChange.bind(this));
+    document.addEventListener('resetFilterChanged', this.onResetChange);
   }
 
   public initConfig(): void {
@@ -67,10 +70,6 @@ export class GroupFilter extends BaseComponent {
     this.initSearch();
     this.initResetButton();
     this.initResetStorageButton();
-  }
-
-  protected onResetChange(): void {
-    this.loadInputConfig(DEFAULT_SEARCH);
   }
 
   private initSorting(): void {

@@ -24,6 +24,12 @@ export class ValueFilter extends BaseComponent {
 
   protected element: HTMLElement = document.createElement('div');
   protected template: string = getTemplate();
+  protected onResetChange = (): void => {
+    this.loadPopularConfig(DEFAULT_POPULAR);
+    this.loadSeriesConfig(DEFAULT_SERIES);
+    this.loadSizeConfig(DEFAULT_SIZE);
+    this.loadColorConfig(DEFAULT_COLOR);
+  };
 
   static get instance() {
     return ValueFilter._instance;
@@ -39,7 +45,7 @@ export class ValueFilter extends BaseComponent {
 
   public init(): void {
     super.init();
-    document.addEventListener('resetFilterChanged', this.onResetChange.bind(this));
+    document.addEventListener('resetFilterChanged', this.onResetChange);
   }
 
   public initConfig(): void {
@@ -55,13 +61,6 @@ export class ValueFilter extends BaseComponent {
     this.initPopular();
     this.initSeries();
     this.initSize();
-  }
-
-  protected onResetChange(): void {
-    this.loadPopularConfig(DEFAULT_POPULAR);
-    this.loadSeriesConfig(DEFAULT_SERIES);
-    this.loadSizeConfig(DEFAULT_SIZE);
-    this.loadColorConfig(DEFAULT_COLOR);
   }
 
   private initColor(): void {
