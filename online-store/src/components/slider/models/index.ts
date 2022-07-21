@@ -1,2 +1,2 @@
-export * from './slider-event.model';
+export * from './slider-event.enum';
 export * from './slider.model';

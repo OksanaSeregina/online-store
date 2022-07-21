@@ -1,1 +1,1 @@
-export * from './root.model';
+export * from './root.enum';

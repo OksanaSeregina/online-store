@@ -1,4 +1,4 @@
-import { GroupFilterSelectOptionValue } from './group-filter-select-option-value.model';
+import { GroupFilterSelectOptionValue } from './group-filter-select-option-value.enum';
 
 export interface GroupFilterSelectOption {
   name: string;
