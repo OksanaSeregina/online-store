@@ -1,6 +1,7 @@
 @use "@material/slider/styles";
 
 @import '../../colors.scss';
+@import '../../fonts.scss';
 
 .container-slider {
   margin-top: 15px;
@@ -24,7 +25,6 @@
     align-items: center;
     margin: 10px 0;
     min-width: 80px;
-    font-size: 18px;
-    font-weight: 600;
+    @include font(18px, 600);
   }
 }

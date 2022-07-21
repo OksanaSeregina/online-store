@@ -22,9 +22,7 @@ footer {
 }
 
 .item-link-github {
-  @include catamaran;
-  font-size: 26px;
-  line-height: 50px;
+  @include catamaran(26px, 50px);
   margin-right: 20px;
   transition: 1s;
 

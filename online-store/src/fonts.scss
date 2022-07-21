@@ -5,8 +5,16 @@
   color: $text-color;
 }
 
-@mixin catamaran {
+@mixin catamaran($fontSize, $lineHeight) {
   font-family: 'Catamaran', sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin font($fontSize, $fontWeight, $lineHeight: inherit) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
 }

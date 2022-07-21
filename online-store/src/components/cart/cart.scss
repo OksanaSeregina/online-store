@@ -1,4 +1,5 @@
 @import '../../colors.scss';
+@import '../../fonts.scss';
 
 .icon {
   &-cart {
@@ -26,8 +27,7 @@
     background: $red;
     border-radius: 50%;
     padding: 0 7px;
-    font-size: small;
-    font-weight: 600;
+    @include font(small, 600);
     right: -75%;
     top: -12%;
   }

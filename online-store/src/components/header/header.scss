@@ -12,9 +12,7 @@ header {
 
 header a {
   text-decoration: none;
-  @include catamaran;
-  font-size: 20px;
-  line-height: 34px;
+  @include catamaran(20px, 34px);
 }
 
 .info__header {

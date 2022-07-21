@@ -1,4 +1,5 @@
 @import '../../colors.scss';
+@import '../../fonts.scss';
 
 .product-card {
   cursor: pointer;
@@ -25,9 +26,7 @@
   color: $text-color;
 
   .name-product {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
+    @include font(24px, 500, 32px);
     border-bottom: solid 1px $border-color;
     display: inline-block;
     margin: 0;
@@ -35,9 +34,7 @@
   }
 
   .description {
-    font-size: 16px;
-    line-height: 8px;
-    font-weight: 500;
+    @include font(16px, 500, 8px);
   }
 }
 
@@ -47,8 +44,7 @@
   button {
     text-decoration: none;
     width: 160px;
-    font-size: 16px;
-    line-height: 24px;
+    @include font(16px, normal, 24px);
     color: $white;
     background: $red;
     padding: 15px;
